@@ -20,7 +20,7 @@ gulp.task('minify-css', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('./sass-styles/**/*.scss', ['sass']);
+  gulp.watch('./sass-styles/main.scss',['sass']);
 });
 
 gulp.task('browser-sync', function() {
@@ -31,4 +31,4 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('default',['watch','sass','minify-css']);
+gulp.task('default',['watch']);
