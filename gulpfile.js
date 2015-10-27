@@ -3,6 +3,7 @@ var sass   		= require('gulp-sass');
 var watch   	= require('gulp-watch');
 var minifyCss   = require('gulp-minify-css');
 var rename   	= require('gulp-rename');
+var uglify      = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 
 
@@ -11,8 +12,14 @@ gulp.task('sass', function () {
   gulp.src('./sass-styles/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(minifyCss())
-    .pipe(rename('main.min.css'))
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./minifycss'));
+});
+
+gulp.task('compress', function() {
+  return gulp.src('lib/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('minifyjs'));
 });
 
 gulp.task('watch', function () {
