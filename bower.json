@@ -1,0 +1,22 @@
+{
+  "name": "booking_website",
+  "version": "0.0.0",
+  "homepage": "https://github.com/deepak6sp/booking_website",
+  "authors": [
+    "deepak6sp <deepak6sp@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.5"
+  }
+}
