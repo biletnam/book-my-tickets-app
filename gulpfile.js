@@ -29,7 +29,7 @@ gulp.task('watch', function () {
 gulp.task('browser-sync',['watch'],function() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            proxy:"localhost"
         }
     });
     gulp.watch("./**/*").on('change', browserSync.reload);
