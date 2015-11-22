@@ -3,3 +3,12 @@
 .navbar{
 	margin-bottom:0px;
 }
+
+#select_location{
+	border: none;
+	background-color: transparent;
+}
+
+.btn.active, .btn:active{
+	box-shadow:none;
+}
