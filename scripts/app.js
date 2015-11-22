@@ -1,4 +1,15 @@
-var bookingApp = angular.module('myBookingApp');
+var bookingApp = angular.module('myBookingApp',[]);
+
+
+
+bookingApp.controller('select_location_controller',function($scope){
+  var location_list = ['bangalore','hyderbad','kerela'];
+  
+
+});
+
+
+/*
 
 bookingApp.constant('ApiEndpoint', {
   url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?',
@@ -8,7 +19,6 @@ bookingApp.constant('ApiEndpoint', {
   key:'AIzaSyB_MWaVyfMisy4elEy-vCjqTQYpbikFw1A'
 });
 
-/*
 bookingApp.controller('myAppController',function($scope){
   $scope.title='BookMyTicket';
   $scope.select_location = function() {
