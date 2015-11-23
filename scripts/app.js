@@ -5,7 +5,7 @@ var bookingApp = angular.module('myBookingApp',[]);
 bookingApp.controller('select_location_controller',function($scope){
   var location_list = ['bangalore','hyderbad','kerela'];
   
-
+ 
 });
 
 
