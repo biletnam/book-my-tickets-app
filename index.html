@@ -22,8 +22,8 @@
 
 	    <div class="collapse navbar-collapse" id="top-navbar-collapse">
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#" data-toggle="modal" data-target="#sign_in_modal">SignIn</a></li>
-	        <li><a href="#">Register </a></li>
+	        <li><a href="#" data-toggle="modal" data-target="#sign_in_modal">Sign In</a></li>
+	        <li><a href="#" data-toggle="modal" data-target="#join_now_modal">Register</a></li>
 	      </ul>
 	    </div>
 	  </div>
@@ -64,7 +64,7 @@
 
 	  </div>
 	</div><!-- end #city_selection_modal -->
-	<div id="sign_in_modal" class="modal fade" role="dialog" ng-controller="select_location_controller">
+	<div id="sign_in_modal" class="modal fade" role="dialog" ng-controller="sign_in_controller">
 	  <div class="modal-dialog">
 
 	    <!-- Modal content-->
@@ -80,22 +80,76 @@
 						<form>
 						    <div class="form-group has-feedback">
 						   	 	<i class="glyphicon glyphicon-envelope form-control-feedback" aria-hidden="true"></i>
-								<input type="text" class="form-control" placeholder="Username">								
-								<input type="text" class="form-control" placeholder="Password">
-								<button type="button" class="btn btn-primary col-xs-4">Login</button>
-								<a class="col-xs-8" href="">Forgot password?</a>
+								<input type="text" class="form-control" placeholder="Email address">
 							</div>
+							<div class="form-group has-feedback">
+								<i class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></i>
+								<input type="text" class="form-control" placeholder="Password">
+							</div>
+							<p class="text-center">
+								<button type="button" class="btn btn-primary col-xs-4">Login</button>
+								<a class="forgot_password pull-left" href="">Forgot password?</a>
+							</p>
 						</form>
 					</div><!-- /.col-xs-offset-2 col-xs-8 -->
 				</div>
 		    </div><!-- modeal-body -->
 	      	<div class="modal-footer">
+	      		<p class="text-center">Don’t have an account? <button type="button" class="btn btn-danger">Join now</button></p>
 	        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	      	</div>
 	    </div>
 
 	  </div>
-	</div><!-- end #city_selection_modal -->
+	</div><!-- end #sign_in_modal -->
+
+
+	<div id="join_now_modal" class="modal fade" role="dialog" ng-controller="join_now_controller">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+		    <div class="modal-header">
+		    	<div class="row text-center">
+				    <h4 class="modal-title">Join Now</h4>
+				</div><!-- /.col-xs-offset-2 col-xs-8 -->
+		    </div>
+	    	<div class="modal-body">
+		    	<div class="row">
+					<div class="col-xs-offset-2 col-xs-8">
+						<form>
+							<div class="form-group has-feedback">
+						   	 	<i class="glyphicon glyphicon-envelope form-control-feedback" aria-hidden="true"></i>
+								<input type="text" class="form-control" placeholder="Email address">
+							</div>
+							<div class="form-group has-feedback">
+								<i class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></i>
+								<input type="text" class="form-control" placeholder="Password">
+							</div>
+							<div class="form-group has-feedback">
+								<i class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></i>
+								<input type="text" class="form-control" placeholder="Confirm password">
+							</div>
+							<div class="checkbox">
+						        <label>
+						          <input type="checkbox"> I agree to <a href=""> terms and conditions </a>
+						        </label>
+						    </div>
+							<p class="text-center">
+								<button type="button" class="btn btn-primary col-xs-4">Create account</button>
+							</p>
+						</form>
+					</div><!-- /.col-xs-offset-2 col-xs-8 -->
+				</div>
+		    </div><!-- modeal-body -->
+	      	<div class="modal-footer">
+	      		<p class="text-center">Already joined? <button type="button" class="btn btn-success">Sign In</button></p>
+	        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      	</div>
+	    </div>
+
+	  </div>
+	</div><!-- end #sign_in_modal -->
 
 	<div class="jumbotron">
 		<div class="container container-fluid">
