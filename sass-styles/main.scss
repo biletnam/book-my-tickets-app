@@ -1,7 +1,14 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
+$grey:#ccc;
+$black:black;
+$white:white;
+$text_color:#E8003D;
+$background_color:white;
+$primary_background_color:#9CE5F2;
+
 .wrapper{
-  background-color:#1D1D1D;
+  background-color:$background_color;
   min-height:800px;
 }
 
@@ -10,23 +17,33 @@
 	position: absolute;
     top: 16px;
     z-index: 1;
-    margin: 0 45%;
+    text-align: center;
+    width: 100%;
     font-size:16px;
+}
+.primary_navbar{
+	background-color: $primary_background_color;
+}
+.secondary_navbar{
+	clear:both;
 }
 
 .nav{
 	a{
-		color:white;
+		color:$white;
 		text-decoration:none;
 		&:focus,&:hover{
-			color:white;
+			color:$text_color;
 			outline: none;
+			span{
+				color:$white;
+			}
 		}
 		span{
-			color:white;
+			color:$text_color;
 		}
 		.text{
-			color:white;
+			color:$text_color;
 			font-size:18px;
 			font-family: inital;
 		}
@@ -47,21 +64,31 @@
 }
 .navbar-left{
 	margin-left:-10px;
+	li {
+		a{
+			&:hover{
+				color:$white;
+				background-color: $text_color; 
+			}
+		}
+		a.active{
+			border-left:1px solid $grey;
+			border-right:1px solid $grey;
+			border-top:1px solid $grey;
+		}
+	}
 } 
-.navbar-right {
-
+.navbar-right {	
+	li {
+		a{
+			height:55px;
+			&:hover{
+				color:$white;
+				background-color: $text_color; 
+			}
+		}
+	}
 }
-.nav > li > a:focus, .nav > li > a:hover {
-    text-decoration: none;
-    background-color: transparent;
-    background-color: white;
-    color:#333430;
-    span{
-    	color:#333430;
-    }
-    
-}
-
 
 .navbar-right.navbar-form{
 	width:275px;
@@ -73,6 +100,14 @@
 	}
 }
 
+.nav>li>a:focus{
+	border-left:1px solid $grey;
+	border-right:1px solid $grey;
+	border-top:1px solid $grey;
+	span{
+		color:$black;
+	}
+}
 
 
 #select_location{
@@ -80,7 +115,7 @@
 	background-color: transparent;
 	font-family: initial;
 	&:hover{
-		color:white;
+		color:$text_color;
 	}
 }
 
@@ -117,12 +152,20 @@
 	width:300px;
 	height:275px;
 	margin-left:-10px;
-	border:1px solid white;
+	border-left:1px solid $grey;
+	border-right:1px solid $grey;
+	border-bottom:1px solid $grey;
 	ul{
 		padding-top: 10px;
     	padding-left: 10px;
+    	li{
+    		a{
+    			color:$black; 
+    		}
+    	}
 	}
 	#by_movie,#by_cinemas{
 		padding-top: 20px;
+		
 	}
 }
