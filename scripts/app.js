@@ -1,8 +1,29 @@
-var bookingApp = angular.module('myBookingApp',[]);
+var bookingWebsiteApp = angular.module('myBookingWebsiteApp',['ngRoute']);
 
 
 
-bookingApp.controller('select_location_controller',function($scope){
+bookingWebsiteApp.controller('mainController',function($scope){
+  $scope.location_list = "bangalore";
+  
+ 
+});
+bookingWebsiteApp.controller('select_location_controller',function($scope){
+  $scope.location_list = "chennai";
+  
+ 
+});
+bookingWebsiteApp.controller('sign_in_controller',function($scope){
+  var location_list = ['bangalore','hyderbad','kerela'];
+  
+ 
+});
+
+bookingWebsiteApp.controller('join_now_controller',function($scope){
+  var location_list = ['bangalore','hyderbad','kerela'];
+  
+ 
+});
+bookingWebsiteApp.controller('quick_tickets',function($scope){
   var location_list = ['bangalore','hyderbad','kerela'];
   
  
