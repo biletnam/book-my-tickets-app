@@ -7,6 +7,8 @@ bookingWebsiteApp.controller('mainController',function($scope){
   
  
 });
+
+/*
 bookingWebsiteApp.controller('select_location_controller',function($scope){
   $scope.location_list = "chennai";
   
