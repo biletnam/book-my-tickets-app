@@ -32,8 +32,6 @@ bookingWebsiteApp.controller('quick_tickets',function($scope){
 });
 
 
-/*
-
 bookingApp.constant('ApiEndpoint', {
   url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?',
   selected_location_coordinates:'12.971599,77.594563',

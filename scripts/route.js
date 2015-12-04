@@ -1,15 +1,15 @@
 bookingWebsiteApp.config(['$routeProvider', function($routeProvider) {
    	$routeProvider
    	.when('/', {
-      templateUrl: 'index.html', 
+      templateUrl: 'partials/quick_tickets.html', 
       controller: 'mainController'
    	})
   	.when('/quick_tickets', {
-      templateUrl: 'quick_tickets.html',
-      controller: 'mainController'
+      templateUrl: 'partials/quick_tickets.html',
+      controller: 'quick_tickets'
    	})
    	.otherwise({
-      redirectTo: '/quick_tickets'
+      redirectTo: 'partials/quick_tickets.html'
    	});
 	
 }]);
