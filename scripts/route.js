@@ -8,6 +8,14 @@ bookingWebsiteApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'partials/quick_tickets.html',
       controller: 'quick_tickets'
    	})
+   	.when('/by_movie', {
+      templateUrl: 'partials/quick_tickets.html',
+      controller: 'quick_tickets'
+   	})
+   	.when('/by_cinemas', {
+      templateUrl: 'partials/quick_tickets.html',
+      controller: 'quick_tickets'
+   	})
    	.otherwise({
       redirectTo: 'partials/quick_tickets.html'
    	});

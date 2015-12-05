@@ -7,6 +7,24 @@ bookingWebsiteApp.controller('mainController',function($scope){
   
  
 });
+bookingWebsiteApp.controller('quick_tickets',function($scope,$http){
+  $scope.location_list = ['bangalore','hyderbad','kerela'];
+  $http({
+    method: 'JSON',
+    url: 'php_files/get_movie_information.php'
+    }).then(function successCallback(response) {
+      // this callback will be called asynchronously
+      // when the response is available
+      $scope.result=response;
+      console.log($scope.result);
+    }, function errorCallback(response) {
+      // called asynchronously if an error occurs
+      // or server returns response with an error status.
+    });
+  
+ 
+});
+
 
 /*
 bookingWebsiteApp.controller('select_location_controller',function($scope){
