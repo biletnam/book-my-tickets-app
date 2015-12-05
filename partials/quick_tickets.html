@@ -90,8 +90,8 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<h2>Latest movies</h2>
-			<div ng-repeat="list in result">
-			    movies name = {{list.data.movies.year}}
+			<div ng-repeat="list in result.movies">
+			    <img src="{{list.urlPoster}}" />
 			</div>
 		</div>
 	</div>

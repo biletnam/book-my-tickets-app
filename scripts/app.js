@@ -2,26 +2,26 @@ var bookingWebsiteApp = angular.module('myBookingWebsiteApp',['ngRoute']);
 
 
 
-bookingWebsiteApp.controller('mainController',function($scope){
+bookingWebsiteApp.controller('mainController',function($scope,$http){
   $scope.location_list = "bangalore";
+   var request = $http({
+    method: 'JSON',
+    url: 'php_files/get_movie_information.php',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    });
+    request.success(function(response) {
+      $scope.result=response.data;
+      console.log(response.data);
+    });
+    request.error(function(response) {
+       console.log('Could Not Connect to Server');
+    });
+  
   
  
 });
 bookingWebsiteApp.controller('quick_tickets',function($scope,$http){
-  $scope.location_list = ['bangalore','hyderbad','kerela'];
-  $http({
-    method: 'JSON',
-    url: 'php_files/get_movie_information.php'
-    }).then(function successCallback(response) {
-      // this callback will be called asynchronously
-      // when the response is available
-      $scope.result=response;
-      console.log($scope.result);
-    }, function errorCallback(response) {
-      // called asynchronously if an error occurs
-      // or server returns response with an error status.
-    });
-  
+
  
 });
 
